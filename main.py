@@ -18,7 +18,10 @@ auth.set_access_token(access_token, access_token_secret)
 # Creating the API object while passing in auth information
 api = tweepy.API(auth) 
 for user in userlist:
-	api.user_timeline(user)
+	try:
+		api.user_timeline(user)
+	except tweepy.error.TweepError:
+		print "Error for" + user
 	
 
 
