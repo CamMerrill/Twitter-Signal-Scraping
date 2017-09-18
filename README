@@ -1,10 +1,15 @@
-TODO:
+We have:
 
-For each user, we want:
-Date of most recent tweet
-Date of 200th (or nth tweet)
-Number of Tweets in that span from 1 to n
-Number of Followers
-Total Number of Favorites
-Total Number of Retweets
-Total Number of Replies
+Date of 1st
+Date of nth
+Time between
+TFrequency
+Total Retweets
+Total Favorites
+
+
+We do not have replies
+
+TODO:
+Put into excel, 
+Analyze
