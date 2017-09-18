@@ -19,7 +19,12 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth) 
 for user in userlist:
 	try:
-		api.user_timeline(user)
+		timeline = api.user_timeline(user,count=200)
+		print user
+		userTweetCount = 0
+		for tweet in timeline:
+			print tweet.retweet_count 
+		print ( "---" )
 	except tweepy.error.TweepError:
 		print "Error for" + user
 	

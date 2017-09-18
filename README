@@ -1,0 +1,10 @@
+TODO:
+
+For each user, we want:
+Date of most recent tweet
+Date of 200th (or nth tweet)
+Number of Tweets in that span from 1 to n
+Number of Followers
+Total Number of Favorites
+Total Number of Retweets
+Total Number of Replies
