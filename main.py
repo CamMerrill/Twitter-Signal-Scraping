@@ -7,11 +7,11 @@ consumer_key = auth.key
 consumer_secret = auth.secret
 access_token = auth.token
 access_token_secret = auth.tokenSecret
-userlist = top100.userlist
+userlist = top1000.userlist
 
 
 
-with open ('top100Scraped.csv', 'wb') as csvfile:
+with open ('top1000Scraped.csv', 'wb') as csvfile:
 	csvwriter = csv.writer(csvfile, delimiter=' ')
 	# Creating the authentication object
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -19,7 +19,7 @@ with open ('top100Scraped.csv', 'wb') as csvfile:
 	auth.set_access_token(access_token, access_token_secret)
 	# Creating the API object while passing in auth information
 	api = tweepy.API(auth) 
-	csvwriter.writerow(['User Name', 'Follower Count', 'First Tweet Date', 'Last Tweet Date', 'Time Between T1 Tn',
+	csvwriter.writerow(['User', 'Follower Count', 'First Tweet Date', 'Last Tweet Date', 'Time Between T1 Tn',
 				'Avg Tweets Per Day', 'Tweet Total', 'Retweet Total', 'Favorite Total', 
 				'Avg Favorites', 'Average Retweets', 'Avg Inter Per Tweet', 'Avg Int Per Tweet Per Follower'])
 	for user in userlist:
