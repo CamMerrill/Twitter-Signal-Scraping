@@ -1,5 +1,5 @@
 #Top 1000 Twitter Users 9.14.2017
-userlist = [
+userList = [
 "katyperry",
 "justinbieber",
 "BarackObama",
@@ -76,7 +76,7 @@ userlist = [
 "PMOIndia",
 "edsheeran",
 "POTUS",
-"deepikadukone",
+"deepikapadukone",
 "akshaykumar",
 "blakeshelton",
 "NatGeo",
@@ -111,7 +111,6 @@ userList.extend([
 "xtina",
 "arrahman",
 "WayneRooney",
-"VineCreators",
 "ParisHilton",
 "3gerardpique",
 "ivetesangalo",
@@ -156,7 +155,7 @@ userList.extend([
 "jamesdrodriguez",
 "voguemagazine",
 "Pontifex",
-"macrosmion",
+"marcosmion",
 "CHANEL",
 "aliaa08",
 "AlArabiya",
@@ -203,11 +202,11 @@ userList.extend([
 "NancyAjram",
 "kelly_clarkson",
 "programapanico",
-"nickjonas"]
-#top200 end
+"nickjonas"])
+
 #201-300
-userList.extend[
-"SarahKSilverman",
+
+userList.extend(["SarahKSilverman",
 "juanes",
 "rafinhabastos",
 "AP",
@@ -220,7 +219,7 @@ userList.extend[
 "TreySongz",
 "SethMacFarlane",
 "FIFAcom",
-"LuisSuiarez9",
+"LuisSuarez9",
 "SabrinaSato",
 "azizansari",
 "enews",
@@ -240,9 +239,9 @@ userList.extend[
 "realwbonner",
 "cinema21",
 "zoella",
-"Pharrel",
+"Pharrell",
 "TEDTalks",
-"StephenCurrey30",
+"StephenCurry30",
 "juniorbachchan",
 "TheOnion",
 "MarcAnthony",
@@ -306,10 +305,10 @@ userList.extend[
 "50cent",
 "luansantana",
 "ShawnMendes",
-"rioferdy5"]
+"rioferdy5"])
 
 #301-400
-userList.extend[
+userList.extend([
 "serenawilliams",
 "AppleMusic",
 "Anahi",
@@ -341,12 +340,12 @@ userList.extend[
 "Michael5SOS",
 "hm",
 "IBGDRGN",
-"davidbisdal",
+"davidbisbal",
 "cnnarabic",
 "DavidLuiz_4",
 "cbabdullahgul",
 "LFC",
-"marioteguf",
+"marioteguh",
 "montanertwiter",
 "BillClinton",
 "143redangel",
@@ -408,10 +407,10 @@ userList.extend[
 "CherLloyd",
 "AristeguiOnline",
 "realmadridarab",
-"MonsieurDream"]
+"MonsieurDream"])
 
 #401-500
-userList.extend[
+userList.extend([
 "mcuban",
 "inijedar",
 "GalatasaraySK",
@@ -437,7 +436,7 @@ userList.extend[
 "NPR",
 "PrinceRoyce",
 "NoticiasRCN",
-"DwayneWade",
+"DwyaneWade",
 "NeYoCompound",
 "TwitterMovies",
 "Calum5SOS",
@@ -502,18 +501,18 @@ userList.extend[
 "Ubisoft",
 "AnnaKendrick47",
 "EPN",
-"atanddec",
+"antanddec",
 "Cinepolis",
 "Talhabeeb",
 "officialjaden",
-"najwajaram",
+"najwakaram",
 "ShraddhaKapoor",
 "jokowi",
 "la_patilla",
 "tim_cook",
-"PerezHilton"]
+"PerezHilton"])
 
-userList.extend[
+userList.extend([
 "WalkingDead_AMC",
 "EW",
 "VanessaHudgens",
@@ -556,7 +555,7 @@ userList.extend[
 "DemetAkalin",
 "MirzaSania",
 "RanveerOfficial",
-"jenettemccurdy",
+"jennettemccurdy",
 "googlechrome",
 "GiGiHadid",
 "oceara",
@@ -613,11 +612,11 @@ userList.extend[
 "AlHadath",
 "aristeguicnn",
 "Trevornoah",
-"Nashgrier"]
+"Nashgrier"])
 
 #601-700
 
-userList.extend[
+userList.extend([
 "OneLouderApps",
 "petewentz",
 "batalalgoos",
@@ -717,13 +716,13 @@ userList.extend[
 "SamsungMobileUS",
 "Lakers",
 "Marvel",
-"PSG_inside"]
+"PSG_inside"])
 
 
 
 #701-800
 
-userList.extend[
+userList.extend([
 "Sethrogen",
 "Chrisrock",
 "FelipeCalderon",
@@ -822,11 +821,11 @@ userList.extend[
 "polo_polo",
 "ABdeVilliers17",
 "PointlessBlog",
-"LeaMichele"]
+"LeaMichele"])
 
 #801-900
 
-userList.extend[
+userList.extend([
 "SteveCarell",
 "BethanyMota",
 "paramore",
@@ -867,7 +866,7 @@ userList.extend[
 "pedroalfonsoo",
 "giseleofficial",
 "intel",
-"mustafa_agha',
+"mustafa_agha",
 "1victorvaldes",
 "k_alshenaif",
 "eddie_izzard",
@@ -925,10 +924,10 @@ userList.extend[
 "autocorrects",
 "manuginobili",
 "RevRunWisdom",
-"krungy21"]
+"krungy21"])
 
 #900-1000!!
-userList.extend[
+userList.extend([
 "thiaguinhocomth",
 "psy_oppa",
 "LAURAGII",
@@ -1029,5 +1028,5 @@ userList.extend[
 "iCarly",
 "tonyhawl",
 "Poconggg",
-"DRJAMESCABOT"]
+"DRJAMESCABOT"])
 

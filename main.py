@@ -1,13 +1,14 @@
 import auth
 import tweepy
 import top100
+import top1000
 import csv
 
 consumer_key = auth.key
 consumer_secret = auth.secret
 access_token = auth.token
 access_token_secret = auth.tokenSecret
-userlist = top1000.userlist
+userList = top1000.userList
 
 
 
@@ -22,17 +23,21 @@ with open ('top1000Scraped.csv', 'wb') as csvfile:
 	csvwriter.writerow(['User', 'Follower Count', 'First Tweet Date', 'Last Tweet Date', 'Time Between T1 Tn',
 				'Avg Tweets Per Day', 'Tweet Total', 'Retweet Total', 'Favorite Total', 
 				'Avg Favorites', 'Average Retweets', 'Avg Inter Per Tweet', 'Avg Int Per Tweet Per Follower'])
-	for user in userlist:
+	for user in userList:
 		try:
 			timeline = api.user_timeline(user,count=200)
 			tweepyUser = api.get_user(user)
-			print user
+			#print user
 			userTweetCount = 0
 			userRetweetTotal = 0
 			userFavoriteTotal = 0
 			userRepliesTotal = 0
 
-			firstTweet =  timeline[0]
+			try:
+				firstTweet =  timeline[0]
+			except IndexError:
+				print ("FIX THIS: " + user)
+				raise tweepy.error.TweepError
 			firstTweetDate = firstTweet.created_at
 		
 			for tweet in timeline:
@@ -48,6 +53,7 @@ with open ('top1000Scraped.csv', 'wb') as csvfile:
 				days = 1
 			avgFav = float(userFavoriteTotal)/days
 			avgRet = float(userRetweetTotal)/days
+			'''
 			print "Follower Count: " + str(tweepyUser.followers_count)
 			print "Most Recent Tweet: " + str(firstTweetDate)
 			print "Last Crawled Tweet Date: " + str(lastTweetDate)
@@ -60,14 +66,15 @@ with open ('top1000Scraped.csv', 'wb') as csvfile:
 			print "Average Retweets per Tweet: " + str(avgRet)
 			print "Total Avg Interactions: " + str(avgFav + avgRet)
 			print "Avg Interactions Per Follower" + str(float(avgFav+avgRet)/tweepyUser.followers_count)
+			'''
 			
 			csvwriter.writerow([user, tweepyUser.followers_count, firstTweetDate, lastTweetDate, days, 
 				float(userTweetCount)/days, userTweetCount, userRetweetTotal, userFavoriteTotal, 
 				float(userFavoriteTotal)/userTweetCount, float(userRetweetTotal)/userTweetCount, avgRet+avgFav, (avgFav+avgRet)/tweepyUser.followers_count])
-			print ("------")
+			#print ("------")
 			
 		except tweepy.error.TweepError:
-			print "Error for" + user
+			print "Error for " + user
 		
 
 
