@@ -1,7 +1,7 @@
 #fileName = raw_input("Enter file name to clean: ")
 fileName = "US100BrandsRaw"
 inputFile = open(fileName+".txt", 'r')
-outputFile = open(fileName + "-clean.txt", 'w')
+outputFile = open("Clean/" + fileName[:-3] + "-clean.txt", 'w')
 
 
 
