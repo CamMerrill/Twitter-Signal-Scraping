@@ -20,6 +20,7 @@ with open ('top1000Scraped.csv', 'wb') as csvfile:
 	auth.set_access_token(access_token, access_token_secret)
 	# Creating the API object while passing in auth information
 	api = tweepy.API(auth) 
+	userCount = 0
 	csvwriter.writerow(['User', 'Follower Count', 'First Tweet Date', 'Last Tweet Date', 'Time Between T1 Tn',
 				'Avg Tweets Per Day', 'Tweet Total', 'Retweet Total', 'Favorite Total', 
 				'Avg Favorites', 'Average Retweets', 'Avg Inter Per Tweet', 'Avg Int Per Tweet Per Follower'])
@@ -39,7 +40,7 @@ with open ('top1000Scraped.csv', 'wb') as csvfile:
 				print ("FIX THIS: " + user)
 				raise tweepy.error.TweepError
 			firstTweetDate = firstTweet.created_at
-		
+			userCount += 1	
 			for tweet in timeline:
 				userRetweetTotal += tweet.retweet_count
 				userFavoriteTotal += tweet.favorite_count
@@ -76,7 +77,7 @@ with open ('top1000Scraped.csv', 'wb') as csvfile:
 		except tweepy.error.TweepError:
 			print "Error for " + user
 		
-
+print userCount
 
 
 
