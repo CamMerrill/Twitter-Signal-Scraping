@@ -41,9 +41,9 @@ with open ("Datasets/" + inputFileName[14:-2], 'wb') as csvfile:
 
 			try:
 				firstTweet =  timeline[0]
-			except IndexError:
+			except IndexError as e:
 				print ("Error for: " + user)
-				raise tweepy.TweepError
+				raise tweepy.TweepError(user, e)
 			firstTweetDate = firstTweet.created_at
 			userCount += 1	
 			for tweet in timeline:
