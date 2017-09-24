@@ -11,7 +11,8 @@ Total Favorites
 We do not have replies
 
 TODO:
-Multithread?
-
+Multithread locking mechanism...
+https://stackoverflow.com/questions/26325943/many-threads-to-write-log-file-at-same-time-python
+ ?
 Put into excel, 
 Analyze
