@@ -1,18 +1,23 @@
 import auth
 import tweepy
-import top100
-import top1000
 import csv
+import sys
 
 consumer_key = auth.key
 consumer_secret = auth.secret
 access_token = auth.token
 access_token_secret = auth.tokenSecret
-userList = top1000.userList
+userList = []
 
 
+inputFileName = str(sys.argv[1:])
+inputFile = open(inputFileName[2:-2], "r")
+for line in inputFile:
+	userList.append(line)
+	
 
-with open ('top1000Scraped.csv', 'wb') as csvfile:
+
+with open ("Datasets/" + inputFileName[14:-2], 'wb') as csvfile:
 	csvwriter = csv.writer(csvfile, delimiter=' ')
 	# Creating the authentication object
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -37,8 +42,8 @@ with open ('top1000Scraped.csv', 'wb') as csvfile:
 			try:
 				firstTweet =  timeline[0]
 			except IndexError:
-				print ("FIX THIS: " + user)
-				raise tweepy.error.TweepError
+				print ("Error for: " + user)
+				raise tweepy.TweepError
 			firstTweetDate = firstTweet.created_at
 			userCount += 1	
 			for tweet in timeline:
@@ -73,6 +78,7 @@ with open ('top1000Scraped.csv', 'wb') as csvfile:
 				float(userTweetCount)/days, userTweetCount, userRetweetTotal, userFavoriteTotal, 
 				float(userFavoriteTotal)/userTweetCount, float(userRetweetTotal)/userTweetCount, avgRet+avgFav, (avgFav+avgRet)/tweepyUser.followers_count])
 			#print ("------")
+			print userCount
 			
 		except tweepy.error.TweepError:
 			print "Error for " + user
