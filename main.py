@@ -1,3 +1,5 @@
+
+#Special acknowledgement: Kevin Rodewald
 import auth
 import tweepy
 import csv
