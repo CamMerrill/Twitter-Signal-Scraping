@@ -15,4 +15,5 @@ Multithread locking mechanism...
 https://stackoverflow.com/questions/26325943/many-threads-to-write-log-file-at-same-time-python
  ?
 Put into excel, 
+excel is broken with current format, need a better delimiter
 Analyze
