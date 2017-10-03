@@ -20,7 +20,7 @@ for line in inputFile:
 
 
 with open ("Datasets/" + inputFileName[14:-2] + ".csv", 'wb') as csvfile:
-	csvwriter = csv.writer(csvfile, delimiter=' ')
+	csvwriter = csv.writer(csvfile, delimiter=';')
 	# Creating the authentication object
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 	# Setting your access token and secret
