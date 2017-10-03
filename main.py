@@ -26,7 +26,7 @@ with open ("Datasets/" + inputFileName[14:-2] + ".csv", 'wb') as csvfile:
 	# Setting your access token and secret
 	auth.set_access_token(access_token, access_token_secret)
 	# Creating the API object while passing in auth information
-	api = tweepy.API(auth) 
+	api = tweepy.API(auth, wait_on_rate_limit=True) 
 	userCount = 0
 	csvwriter.writerow(['User', 'Follower Count', 'First Tweet Date', 'Last Tweet Date', 'Time Between T1 Tn',
 				'Avg Tweets Per Day', 'Tweet Total', 'Retweet Total', 'Favorite Total', 
@@ -75,6 +75,7 @@ with open ("Datasets/" + inputFileName[14:-2] + ".csv", 'wb') as csvfile:
 			print "Total Avg Interactions: " + str(avgFav + avgRet)
 			print "Avg Interactions Per Follower" + str(float(avgFav+avgRet)/tweepyUser.followers_count)
 			'''
+			user = user.strip()
 			
 			csvwriter.writerow([user, tweepyUser.followers_count, firstTweetDate, lastTweetDate, days, 
 				float(userTweetCount)/days, userTweetCount, userRetweetTotal, userFavoriteTotal, 
@@ -82,8 +83,8 @@ with open ("Datasets/" + inputFileName[14:-2] + ".csv", 'wb') as csvfile:
 			#print ("------")
 			print userCount
 			
-		except tweepy.error.TweepError:
-			print "Error for " + user
+		except tweepy.error.TweepError as e:
+			print "Error for " + user + str(e)
 		
 print userCount
 
