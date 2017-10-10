@@ -1,3 +1,4 @@
 auth.py
 auth.pyc
-.DS_Store
+DS_Store
+gitignore
