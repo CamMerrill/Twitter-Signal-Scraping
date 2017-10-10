@@ -22,10 +22,8 @@ tweepyUser = api.get_user(user)
 
 followingList = api.friends_ids(user)
 print "List length: " + str(len(followingList))
-userObj = api.get_user(followingList[0])
-print(userObj.name)
 
-
+#This only gets us first 5000
 #for id in followingList:
 	#userObj = api.get_user(id)
 	#print userObj
