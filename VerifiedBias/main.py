@@ -17,16 +17,8 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 # Creating the API object while passing in auth information
 api = tweepy.API(auth, wait_on_rate_limit=True) 
-timeline = api.user_timeline(user, count=200)
-tweepyUser = api.get_user(user)
 
-followingList = api.friends_ids(user)
-print "List length: " + str(len(followingList))
-
-#This only gets us first 5000
-#for id in followingList:
-	#userObj = api.get_user(id)
-	#print userObj
-
+for id in tweepy.Cursor(api.friends_ids, id="CamMerrill").items():
+	print id
 
 
